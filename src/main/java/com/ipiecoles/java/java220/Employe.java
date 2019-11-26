@@ -74,9 +74,23 @@ public class Employe {
             System.out.println("La date d'embauche ne peut être postérieure à la date courante");
         }
     }*/
+
+    //106 : Redéfinir la méthode toString (héritée d'Object) pour afficher un employé de la manière suivante
+
     public void setSalaire (Double salaire) {
         this.salaire = salaire;
     }
+
+    @Override
+    public String toString() {
+        return "Employe{" +
+                "nom='" + nom + '\'' +
+                "'prenom'" + prenom + '\'' +
+                "'matricule'" + matricule + '\'' +
+                "'dateEmbauche'" + dateEmbauche +
+                "'salaire'" + salaire +
+                '}';
+     }
 
     //Fin des getters et setters
 
@@ -88,6 +102,4 @@ public class Employe {
     public final Integer getNombreAnneeAnciennete (){
             return LocalDate.now().getYear() - this.dateEmbauche.getYear();
     }
-
-    
 }
