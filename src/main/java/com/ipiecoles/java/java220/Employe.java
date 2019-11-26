@@ -6,13 +6,28 @@ import org.joda.time.LocalDate;
  * Created by pjvilloud on 21/09/17.
  */
 public class Employe {
-    private String nom;
-    private  String prenom;
-    private String matricule;
-    private LocalDate dateEmbauche;
-    private Double salaire;
+    //constantes
 
-    //Récupération les valeurs d'un attributs
+    //Attriubts
+        private String nom;
+        private  String prenom;
+        private String matricule;
+        private LocalDate dateEmbauche;
+        private Double salaire;
+
+    //Constructeurs
+        public Employe() {
+
+    }
+
+    public Employe(String nom, String prenom, String matricule, LocalDate dateEmbauche, Double salaire) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.matricule = matricule;
+        this.dateEmbauche = dateEmbauche;
+        this.salaire = salaire;
+    }
+//Récupération les valeurs d'un attributs
 
     public String getNom() {
         return this.nom;
@@ -46,5 +61,11 @@ public class Employe {
     public void setSalaire (Double salaire) {
         this.salaire = salaire;
     }
+
+    //Fin des getters et setters
+
+    //Exercice 102 : Constructeurs pour la classe Employe,
+
+
     
 }
