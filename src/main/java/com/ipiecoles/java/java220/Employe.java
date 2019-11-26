@@ -85,10 +85,10 @@ public class Employe {
     public String toString() {
         return "Employe{" +
                 "nom='" + nom + '\'' +
-                "'prenom'" + prenom + '\'' +
-                "'matricule'" + matricule + '\'' +
-                "'dateEmbauche'" + dateEmbauche +
-                "'salaire'" + salaire +
+                ", prenom='" + prenom + '\'' +
+                ", matricule='" + matricule + '\'' +
+                ", dateEmbauche=" + dateEmbauche +
+                ", salaire=" + salaire +
                 '}';
      }
 
