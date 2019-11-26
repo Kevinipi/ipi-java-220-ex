@@ -92,6 +92,13 @@ public class Employe {
                 '}';
      }
 
+     //109 : Coder la méthode augmenterSalaire prenant en paramètre un pourcentage d'augmentation
+    // de type Double et augmentant l'attribut salaire du pourcentage passé en paramètre :
+
+    public void augmenterSalaire (Double augmentation) {
+        this.salaire = this.salaire*augmentation + this.salaire;
+    }
+
     //Fin des getters et setters
 
     /*Exercice 103 : Développer et déclarer une méthode GetNombreAnneeAncienneté, calculer le nombre d'année

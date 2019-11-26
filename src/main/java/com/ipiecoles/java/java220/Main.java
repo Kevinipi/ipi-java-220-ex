@@ -28,6 +28,7 @@ public class Main {
             Employe emp3 = new Employe();
 
             System.out.println(emp2);
+            emp.augmenterSalaire(0.5);
+            System.out.println(emp.getSalaire());
     }
-
 }
