@@ -44,6 +44,7 @@ public class Employe {
     public Double getSalaire () {
         return this.salaire;
     }
+
     //Envoie la valeur de l'attribut récupéré
 
     public void setNom(String nom) {
