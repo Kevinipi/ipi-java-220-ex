@@ -55,17 +55,39 @@ public class Employe {
     public void setMatricule(String matricule) {
         this.matricule = matricule;
     }
-    public void setDateEmbauche(LocalDate dateEmbauche) {
+    public void setDateEmbauche(LocalDate dateEmbauche) throws Exception {
         this.dateEmbauche = dateEmbauche;
-    }
+        if (dateEmbauche.isAfter(LocalDate.now())) {
+            throw new Exception("La date d'embauche ne peut être postérieure à la date courante");
+        }else{
+            this.dateEmbauche = dateEmbauche;
+        }
+        }
+        //Methode qui fonctionne ci-dessous pour gerer l'exception
+    /*    try {
+            if (dateEmbauche.isAfter(LocalDate.now())) {
+            }else{
+                this.dateEmbauche = dateEmbauche;
+            }
+        }
+        catch(Exception erreurdate ){
+            System.out.println("La date d'embauche ne peut être postérieure à la date courante");
+        }
+    }*/
     public void setSalaire (Double salaire) {
         this.salaire = salaire;
     }
 
     //Fin des getters et setters
 
-    //Exercice 102 : Constructeurs pour la classe Employe,
+    /*Exercice 103 : Développer et déclarer une méthode GetNombreAnneeAncienneté, calculer le nombre d'année
+    d'ancienneté' d un employés
+    */
 
+    //Méthodes
+    public final Integer getNombreAnneeAnciennete (){
+            return LocalDate.now().getYear() - this.dateEmbauche.getYear();
+    }
 
     
 }

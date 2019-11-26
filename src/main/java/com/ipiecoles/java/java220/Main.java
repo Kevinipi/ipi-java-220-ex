@@ -17,5 +17,9 @@ public class Main {
             System.out.println(emp2.getPrenom());
             emp2.setPrenom("Kevin");
             System.out.println(emp2.getPrenom());
+
+            System.out.println (emp.getNombreAnneeAnciennete());
+            System.out.println(emp2.getNombreAnneeAnciennete());
     }
+
 }
