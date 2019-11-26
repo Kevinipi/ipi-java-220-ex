@@ -17,7 +17,6 @@ public class Employe {
 
     //Constructeurs
         public Employe() {
-
     }
 
     public Employe(String nom, String prenom, String matricule, LocalDate dateEmbauche, Double salaire) {
