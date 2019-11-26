@@ -30,5 +30,6 @@ public class Main {
             System.out.println(emp2);
             emp.augmenterSalaire(0.5);
             System.out.println(emp.getSalaire());
+            System.out.println(emp.getPrimeAnnuelle());
     }
 }

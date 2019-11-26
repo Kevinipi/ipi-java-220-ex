@@ -4,6 +4,8 @@ package com.ipiecoles.java.java220;
 
 import org.joda.time.LocalDate;
 
+import java.util.zip.DeflaterOutputStream;
+
 public class Commercial extends Employe {
 
     //constantes
@@ -11,7 +13,7 @@ public class Commercial extends Employe {
     //202 : Modifier la classe Commercial pour ajouter un attribut caAnnuel de type Double avec son getter et son setter
 
     //Attriubts
-    private Double caAnnuel;
+    private Double caAnnuel = 0d;
 
     //Récupération les valeurs d'un attributs
 
@@ -23,5 +25,13 @@ public class Commercial extends Employe {
 
     public void setCaAnnuel(Double caAnnuel) {
         this.caAnnuel = caAnnuel;
+    }
+
+   /* 203 : Modifier la méthode getPrimeAnnuelle précédemment générée par l'IDE pour que la prime
+    soit égale à 5% du caAnnuel, avec un minimum de 500 € même en cas de chiffre d'affaire nul(l).*/
+
+    @Override
+    public Double getPrimeAnnuelle() {
+        return Math.max(Math.ceil(this.caAnnuel * 0.05),500.0);
     }
 }

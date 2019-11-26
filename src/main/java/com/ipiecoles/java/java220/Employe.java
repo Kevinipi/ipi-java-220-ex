@@ -110,4 +110,11 @@ public class Employe {
     public final Integer getNombreAnneeAnciennete (){
             return LocalDate.now().getYear() - this.dateEmbauche.getYear();
     }
+
+    //110 : Déclarer dans la classe Employe une méthode getPrimeAnnuelle retournant la prime annuelle
+    // de base définie dans la classe Entreprise
+
+    public Double getPrimeAnnuelle() {
+        return Entreprise.primeAnnuelleBase();
+    }
 }
